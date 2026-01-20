@@ -1,8 +1,7 @@
 @charset "UTF-8";
 /*
     Name: GreenNest Architectural 
-    Author: DexignZone
-    projects : https://themeforest.net/user/dexignzone/projects
+    
    
     Table of Content: 
 
@@ -21179,6 +21178,10 @@ ul a.rsswidget:hover {
   width: 100%;
   background: #fff;
 }
+.project-title{
+  display: flex;
+  flex-direction: column;
+}
 
 .dz-box.style-1 {
   -webkit-transition: all 0.8s;
@@ -21251,6 +21254,13 @@ ul a.rsswidget:hover {
   left: 0;
   background: rgba(255, 255, 255, 0.9);
   padding: 20px;
+  width: 55%;
+}
+
+.footer-adress-right{
+  display: flex;
+    flex-wrap: wrap;
+    column-gap: 52px;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -21765,7 +21775,7 @@ ul a.rsswidget:hover {
 
 .testimonial-1 .star-rating li {
   margin: 0 2px;
-  font-size: 16px;
+  font-size: 9px;
 }
 
 .testimonial-1 .testimonial-review {
@@ -21778,6 +21788,7 @@ ul a.rsswidget:hover {
 .testimonial-1 .testimonial-review .review {
   margin: 0;
   line-height: 1;
+  font-size: 16px;
 }
 
 .testimonial-1 .testimonial-name {
@@ -34937,5 +34948,3 @@ footer .widget_services ul li:hover {
     left: 15px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

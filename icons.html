@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flaticon Set Preview</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald:wght@400;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="icons/flaticon/flaticon.css">
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #1f2428;
+        --muted: #596167;
+        --accent: #ff1d4d;
+        --accent-soft: #ffe4ea;
+        --panel: #ffffff;
+        --shadow: 0 18px 45px rgba(17, 24, 39, 0.12);
+        --radius: 18px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        color: var(--ink);
+        background: radial-gradient(circle at top, #fff6ee, #f4f7fb 55%, #eef2f8);
+        min-height: 100vh;
+      }
+
+      header {
+        padding: 48px 24px 24px;
+      }
+
+      .page-title {
+        font-family: "Oswald", sans-serif;
+        letter-spacing: 0.04em;
+        font-size: clamp(28px, 3vw, 42px);
+        margin: 0 0 8px;
+        text-transform: uppercase;
+      }
+
+      .page-subtitle {
+        margin: 0;
+        color: var(--muted);
+        max-width: 720px;
+      }
+
+      .toolbar {
+        margin-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .search {
+        flex: 1 1 280px;
+        position: relative;
+      }
+
+      .search input {
+        width: 100%;
+        padding: 14px 16px 14px 42px;
+        border-radius: 999px;
+        border: 1px solid #e4e7ee;
+        background: #fff;
+        font-size: 0.95rem;
+        box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+      }
+
+      .search span {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--muted);
+        font-size: 1rem;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 16px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      main {
+        padding: 0 24px 64px;
+      }
+
+      .icon-grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .icon-card {
+        background: var(--panel);
+        border-radius: var(--radius);
+        padding: 20px;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        border: 1px solid #eef0f5;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .icon-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 40px rgba(17, 24, 39, 0.16);
+      }
+
+      .icon-swatch {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: #f7f9fc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: var(--accent);
+      }
+
+      .icon-name {
+        font-weight: 600;
+        font-size: 0.95rem;
+        word-break: break-word;
+      }
+
+      .icon-code {
+        font-family: "Courier New", monospace;
+        font-size: 0.82rem;
+        color: var(--muted);
+        background: #f4f6fb;
+        padding: 6px 10px;
+        border-radius: 10px;
+        display: inline-block;
+      }
+
+      .icon-actions {
+        margin-top: auto;
+        display: flex;
+        gap: 8px;
+      }
+
+      .copy-btn {
+        border: none;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 600;
+        padding: 8px 12px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 0.85rem;
+      }
+
+      .copy-btn:active {
+        transform: translateY(1px);
+      }
+
+      .no-results {
+        margin-top: 24px;
+        text-align: center;
+        color: var(--muted);
+        display: none;
+      }
+
+      @media (max-width: 640px) {
+        header {
+          padding-top: 32px;
+        }
+
+        .toolbar {
+          flex-direction: column;
+          align-items: stretch;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="page-title">Flaticon Preview</h1>
+      <p class="page-subtitle">
+        Browse the icons available in <strong>icons/flaticon/flaticon.css</strong>. Click Copy to grab the class name.
+      </p>
+      <div class="toolbar">
+        <div class="search">
+          <span>🔎</span>
+          <input id="icon-search" type="search" placeholder="Search icon class names">
+        </div>
+        <div class="badge">32 icons loaded</div>
+      </div>
+    </header>
+
+    <main>
+      <div class="icon-grid" id="icon-grid">
+        <div class="icon-card" data-icon="flaticon-blueprint-1">
+          <div class="icon-swatch"><i class="flaticon-blueprint-1"></i></div>
+          <div class="icon-name">flaticon-blueprint-1</div>
+          <div class="icon-code">&lt;i class="flaticon-blueprint-1"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-blueprint-1">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-blueprint">
+          <div class="icon-swatch"><i class="flaticon-blueprint"></i></div>
+          <div class="icon-name">flaticon-blueprint</div>
+          <div class="icon-code">&lt;i class="flaticon-blueprint"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-blueprint">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-briefing">
+          <div class="icon-swatch"><i class="flaticon-briefing"></i></div>
+          <div class="icon-name">flaticon-briefing</div>
+          <div class="icon-code">&lt;i class="flaticon-briefing"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-briefing">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-checked">
+          <div class="icon-swatch"><i class="flaticon-checked"></i></div>
+          <div class="icon-name">flaticon-checked</div>
+          <div class="icon-code">&lt;i class="flaticon-checked"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-checked">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-close">
+          <div class="icon-swatch"><i class="flaticon-close"></i></div>
+          <div class="icon-name">flaticon-close</div>
+          <div class="icon-code">&lt;i class="flaticon-close"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-close">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-coffee-cup">
+          <div class="icon-swatch"><i class="flaticon-coffee-cup"></i></div>
+          <div class="icon-name">flaticon-coffee-cup</div>
+          <div class="icon-code">&lt;i class="flaticon-coffee-cup"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-coffee-cup">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-concept">
+          <div class="icon-swatch"><i class="flaticon-concept"></i></div>
+          <div class="icon-name">flaticon-concept</div>
+          <div class="icon-code">&lt;i class="flaticon-concept"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-concept">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-crane">
+          <div class="icon-swatch"><i class="flaticon-crane"></i></div>
+          <div class="icon-name">flaticon-crane</div>
+          <div class="icon-code">&lt;i class="flaticon-crane"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-crane">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-email">
+          <div class="icon-swatch"><i class="flaticon-email"></i></div>
+          <div class="icon-name">flaticon-email</div>
+          <div class="icon-code">&lt;i class="flaticon-email"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-email">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-execution">
+          <div class="icon-swatch"><i class="flaticon-execution"></i></div>
+          <div class="icon-name">flaticon-execution</div>
+          <div class="icon-code">&lt;i class="flaticon-execution"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-execution">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-furniture">
+          <div class="icon-swatch"><i class="flaticon-furniture"></i></div>
+          <div class="icon-name">flaticon-furniture</div>
+          <div class="icon-code">&lt;i class="flaticon-furniture"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-furniture">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-graphic-designer">
+          <div class="icon-swatch"><i class="flaticon-graphic-designer"></i></div>
+          <div class="icon-name">flaticon-graphic-designer</div>
+          <div class="icon-code">&lt;i class="flaticon-graphic-designer"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-graphic-designer">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-happy">
+          <div class="icon-swatch"><i class="flaticon-happy"></i></div>
+          <div class="icon-name">flaticon-happy</div>
+          <div class="icon-code">&lt;i class="flaticon-happy"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-happy">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-home">
+          <div class="icon-swatch"><i class="flaticon-home"></i></div>
+          <div class="icon-name">flaticon-home</div>
+          <div class="icon-code">&lt;i class="flaticon-home"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-home">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-interior-design-1">
+          <div class="icon-swatch"><i class="flaticon-interior-design-1"></i></div>
+          <div class="icon-name">flaticon-interior-design-1</div>
+          <div class="icon-code">&lt;i class="flaticon-interior-design-1"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-interior-design-1">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-interior-design">
+          <div class="icon-swatch"><i class="flaticon-interior-design"></i></div>
+          <div class="icon-name">flaticon-interior-design</div>
+          <div class="icon-code">&lt;i class="flaticon-interior-design"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-interior-design">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-left-arrow">
+          <div class="icon-swatch"><i class="flaticon-left-arrow"></i></div>
+          <div class="icon-name">flaticon-left-arrow</div>
+          <div class="icon-code">&lt;i class="flaticon-left-arrow"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-left-arrow">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-login">
+          <div class="icon-swatch"><i class="flaticon-login"></i></div>
+          <div class="icon-name">flaticon-login</div>
+          <div class="icon-code">&lt;i class="flaticon-login"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-login">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-loupe">
+          <div class="icon-swatch"><i class="flaticon-loupe"></i></div>
+          <div class="icon-name">flaticon-loupe</div>
+          <div class="icon-code">&lt;i class="flaticon-loupe"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-loupe">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-maps-and-location">
+          <div class="icon-swatch"><i class="flaticon-maps-and-location"></i></div>
+          <div class="icon-name">flaticon-maps-and-location</div>
+          <div class="icon-code">&lt;i class="flaticon-maps-and-location"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-maps-and-location">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-parquet">
+          <div class="icon-swatch"><i class="flaticon-parquet"></i></div>
+          <div class="icon-name">flaticon-parquet</div>
+          <div class="icon-code">&lt;i class="flaticon-parquet"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-parquet">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-phone-call">
+          <div class="icon-swatch"><i class="flaticon-phone-call"></i></div>
+          <div class="icon-name">flaticon-phone-call</div>
+          <div class="icon-code">&lt;i class="flaticon-phone-call"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-phone-call">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-pin">
+          <div class="icon-swatch"><i class="flaticon-pin"></i></div>
+          <div class="icon-name">flaticon-pin</div>
+          <div class="icon-code">&lt;i class="flaticon-pin"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-pin">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-placeholder">
+          <div class="icon-swatch"><i class="flaticon-placeholder"></i></div>
+          <div class="icon-name">flaticon-placeholder</div>
+          <div class="icon-code">&lt;i class="flaticon-placeholder"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-placeholder">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-play">
+          <div class="icon-swatch"><i class="flaticon-play"></i></div>
+          <div class="icon-name">flaticon-play</div>
+          <div class="icon-code">&lt;i class="flaticon-play"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-play">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-plus">
+          <div class="icon-swatch"><i class="flaticon-plus"></i></div>
+          <div class="icon-name">flaticon-plus</div>
+          <div class="icon-code">&lt;i class="flaticon-plus"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-plus">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-project-management">
+          <div class="icon-swatch"><i class="flaticon-project-management"></i></div>
+          <div class="icon-name">flaticon-project-management</div>
+          <div class="icon-code">&lt;i class="flaticon-project-management"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-project-management">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-quotation">
+          <div class="icon-swatch"><i class="flaticon-quotation"></i></div>
+          <div class="icon-name">flaticon-quotation</div>
+          <div class="icon-code">&lt;i class="flaticon-quotation"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-quotation">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-quote">
+          <div class="icon-swatch"><i class="flaticon-quote"></i></div>
+          <div class="icon-name">flaticon-quote</div>
+          <div class="icon-code">&lt;i class="flaticon-quote"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-quote">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-right-arrow">
+          <div class="icon-swatch"><i class="flaticon-right-arrow"></i></div>
+          <div class="icon-name">flaticon-right-arrow</div>
+          <div class="icon-code">&lt;i class="flaticon-right-arrow"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-right-arrow">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-support">
+          <div class="icon-swatch"><i class="flaticon-support"></i></div>
+          <div class="icon-name">flaticon-support</div>
+          <div class="icon-code">&lt;i class="flaticon-support"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-support">Copy</button>
+          </div>
+        </div>
+        <div class="icon-card" data-icon="flaticon-telephone">
+          <div class="icon-swatch"><i class="flaticon-telephone"></i></div>
+          <div class="icon-name">flaticon-telephone</div>
+          <div class="icon-code">&lt;i class="flaticon-telephone"&gt;&lt;/i&gt;</div>
+          <div class="icon-actions">
+            <button class="copy-btn" type="button" data-copy="flaticon-telephone">Copy</button>
+          </div>
+        </div>
+      </div>
+      <div class="no-results" id="no-results">No icons match that search.</div>
+    </main>
+
+    <script>
+      const searchInput = document.getElementById("icon-search");
+      const cards = Array.from(document.querySelectorAll(".icon-card"));
+      const noResults = document.getElementById("no-results");
+
+      const updateResults = () => {
+        const query = searchInput.value.trim().toLowerCase();
+        let visible = 0;
+        cards.forEach((card) => {
+          const name = card.dataset.icon;
+          const show = !query || name.includes(query);
+          card.style.display = show ? "" : "none";
+          if (show) {
+            visible += 1;
+          }
+        });
+        noResults.style.display = visible ? "none" : "block";
+      };
+
+      searchInput.addEventListener("input", updateResults);
+
+      const copyButtons = document.querySelectorAll("[data-copy]");
+      copyButtons.forEach((button) => {
+        button.addEventListener("click", async () => {
+          const text = button.getAttribute("data-copy");
+          try {
+            await navigator.clipboard.writeText(text);
+          } catch (err) {
+            const helper = document.createElement("textarea");
+            helper.value = text;
+            helper.setAttribute("readonly", "");
+            helper.style.position = "absolute";
+            helper.style.left = "-9999px";
+            document.body.appendChild(helper);
+            helper.select();
+            document.execCommand("copy");
+            document.body.removeChild(helper);
+          }
+          const original = button.textContent;
+          button.textContent = "Copied";
+          setTimeout(() => {
+            button.textContent = original;
+          }, 1200);
+        });
+      });
+    </script>
+  </body>
+</html>

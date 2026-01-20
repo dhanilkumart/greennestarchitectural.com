@@ -1,0 +1,76 @@
+[
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. ABDUL NASAR",
+    "projectLocation": "Pokkunnu, Calicut",
+    "projectImagePath": "images/work/ABDUL-NASAR-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/ABDUL-NASAR-1.webp",
+      "images/work/ABDUL-NASAR-2.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Sainul Abid",
+    "projectLocation": "Kinassery, Calicut",
+    "projectImagePath": "images/work/abid-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/abid-1.webp",
+      "images/work/abid-2.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Arun",
+    "projectLocation": "Kannancheri, Calicut",
+    "projectImagePath": "images/work/arun-kannancheri-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/arun-kannancheri1.webp",
+      "images/work/arun-kannancheri2.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Basheer",
+    "projectLocation": "Koyavalappu, Calicut",
+    "projectImagePath": "images/work/basheer-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/basheer-1.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Bineesh",
+    "projectLocation": "Kakkodi, Calicut",
+    "projectImagePath": "images/work/bineesh-kakkodi-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/bineesh-kakkodi-1.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Deepak",
+    "projectLocation": "Beypore, Calicut",
+    "projectImagePath": "images/work/deepak-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/deepak-1.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Hareesh",
+    "projectLocation": "Balussery, Calicut",
+    "projectImagePath": "images/work/hareesh-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/hareesh-1.webp"
+    ]
+  }
+  
+]
