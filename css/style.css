@@ -21178,7 +21178,8 @@ ul a.rsswidget:hover {
   width: 100%;
   background: #fff;
 }
-.project-title{
+
+.project-title {
   display: flex;
   flex-direction: column;
 }
@@ -21257,10 +21258,10 @@ ul a.rsswidget:hover {
   width: 55%;
 }
 
-.footer-adress-right{
+.footer-adress-right {
   display: flex;
-    flex-wrap: wrap;
-    column-gap: 52px;
+  flex-wrap: wrap;
+  column-gap: 52px;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -27979,7 +27980,7 @@ pre {
 
 @media only screen and (max-width: 575px) {
   .logo-header img {
-    max-width: 150px;
+    max-width: 210px;
   }
 }
 
