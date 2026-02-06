@@ -71,6 +71,108 @@
     "projectExtraImagesPath": [
       "images/work/hareesh-1.webp"
     ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Jabir",
+    "projectLocation": "Thiruvannur, Calicut",
+    "projectImagePath": "images/work/jabir-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/jabir-1.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Anoop",
+    "projectLocation": "Kakkur, Calicut",
+    "projectImagePath": "images/work/anoop-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/anoop-1.webp",
+      "images/work/anoop-2.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Praveen",
+    "projectLocation": "Calicut",
+    "projectImagePath": "images/work/praveen-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/praveen-1.webp",
+      "images/work/praveen-2.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Rajesh",
+    "projectLocation": "Meenchanda, Calicut",
+    "projectImagePath": "images/work/rajesh-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/rajesh-1.webp",
+      "images/work/rajesh-2.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Rijesh",
+    "projectLocation": "Feroke, Calicut",
+    "projectImagePath": "images/work/rijesh-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/rijesh-1.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Risin",
+    "projectLocation": "Kochi",
+    "projectImagePath": "images/work/risin-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/risin-1.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Roshith",
+    "projectLocation": "Chooloor, Calicut",
+    "projectImagePath": "images/work/roshith-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/roshith-1.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Sabin",
+    "projectLocation": "Elathur, Calicut",
+    "projectImagePath": "images/work/sabin-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/sabin-1.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Sheeba",
+    "projectLocation": "Cheruvannur, Calicut",
+    "projectImagePath": "images/work/sheeba-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/sheeba-1.webp"
+    ]
+  },
+  {
+    "projectTitle": "Residence",
+    "projectSubtitle": "ARCHITECTURE",
+    "clientName": "Mr. Silju",
+    "projectLocation": "Kuttikattur, Calicut",
+    "projectImagePath": "images/work/silju-main.webp",
+    "projectExtraImagesPath": [
+      "images/work/silju-1.webp"
+    ]
   }
-  
 ]
