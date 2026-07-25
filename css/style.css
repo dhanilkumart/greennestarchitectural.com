@@ -34662,3 +34662,93 @@ footer .widget_services ul li:hover {
     left: 15px;
   }
 }
+
+/* Custom Redesign for Architect Portrait Section */
+.about-portrait-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+  z-index: 1;
+}
+.about-portrait-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  border: 3px solid var(--primary);
+  border-radius: 4px;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+.about-portrait-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90%;
+  height: 90%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: -2;
+}
+.about-portrait-img-box {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  transform: translate(15px, 15px);
+  transition: all 0.4s ease;
+}
+.about-portrait-img-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.about-portrait-wrapper:hover .about-portrait-img-box img {
+  transform: scale(1.05);
+}
+.about-portrait-wrapper:hover .about-portrait-img-box {
+  transform: translate(10px, 10px);
+}
+.about-portrait-wrapper:hover::before {
+  transform: translate(5px, 5px);
+}
+.about-portrait-badge {
+  position: absolute;
+  bottom: -15px;
+  left: -15px;
+  background: #111;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 4px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 10;
+  border-left: 4px solid var(--primary);
+  transition: all 0.4s ease;
+}
+.about-portrait-badge .badge-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--primary);
+}
+.about-portrait-badge .badge-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.3;
+}
+.about-portrait-badge:hover {
+  transform: translateY(-5px);
+}
